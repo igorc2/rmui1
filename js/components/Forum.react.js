@@ -22,16 +22,19 @@ var Forum = React.createClass({
     },
 
     render: function() {
-		return {
+		return (
 			<div>
-				<ForumHeader allAnswers={ this.state.allAnswers} />
+				<ForumHeader />
+				<div className="container">
+					<ForumQuestion />
+					<hr/>
+					<ForumAnswers allAnswers={ this.state.allAnswers } />
+					<hr/>
+					<h4>Add a answer</h4>
+					<ForumAddAnswerBox />
+				</div>
 			</div>
-		};
-//        return React.createElement(
-//            'div',
-//            null,
-//            React.createElement(ForumHeader, {allAnswers: this.state.allAnswers})
-//        );
+		);
     }
 
 });
