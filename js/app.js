@@ -14,3 +14,8 @@ myemitter.on('STARTED', function(){
 });
 
 myemitter.emit('STARTED');
+
+ForumDispatcher.register(function(action){
+    console.log('received a action');
+    console.log(action);
+})
